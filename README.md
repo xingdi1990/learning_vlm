@@ -1,3 +1,1 @@
-# learning_vlm
-
-# note down my learning progress of visual language model
+# Persona learning progress of large visual language model
