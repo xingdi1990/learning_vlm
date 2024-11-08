@@ -1,7 +1,8 @@
 # Learning progress of large visual language model
 
 # Roadmaps:
+-[x] SFT LLAMA-3.2-11B-Vision-Instruct with (Q)Lora
 
--[x] Finetune LLAVA-1.5-7B with (Q)Lora and SFT 
+-[x] SFT LLAVA-1.5-7B with (Q)Lora
 
--[x] Finetune LLAVA-1.5-7B with SFT
+-[x] SFT LLAVA-1.5-7B
