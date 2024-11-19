@@ -154,6 +154,21 @@ Only return description. The description should be SEO optimized and for a bette
     return formatted_dataset
 
 
+
+def get_deepspeed_config():
+    return {
+        "fp16": {"enabled": True}, #  make sure to match the training_args
+        "zero_optimization": {
+            "stage": 2,
+            "offload_optimizer": {"device": "cpu"},
+            "allgather_partitions": True,
+            "reduce_scatter": True
+        },
+        "gradient_accumulation_steps": "auto", # set auto to match the training_args
+        "train_batch_size": "auto", # set auto to match the training_args
+        "train_micro_batch_size_per_gpu": "auto" # set auto to match the training_args
+    }
+
 def setup_trainer(model, processor, formatted_dataset):
     """Set up the SFT trainer with appropriate configuration."""
     training_args = SFTConfig(
@@ -168,7 +183,7 @@ def setup_trainer(model, processor, formatted_dataset):
         bf16=False,
         remove_unused_columns=False,
         push_to_hub=False,
-        deepspeed=None
+        deepspeed=get_deepspeed_config()  # Add DeepSpeed config
     )
 
     data_collator = DataCollator(processor)
