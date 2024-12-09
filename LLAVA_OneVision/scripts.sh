@@ -1,0 +1,1 @@
+deepspeed --num_gpus=4 llava_onevision_train_with_QLora_SFT_deepspeed.py

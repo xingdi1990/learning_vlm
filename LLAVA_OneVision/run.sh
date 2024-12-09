@@ -1,1 +1,0 @@
-deepspeed --num_gpus=4 multigpus_llava_onevision_train_with_QLora_SFT_deepspeed_on_the_fly.py
