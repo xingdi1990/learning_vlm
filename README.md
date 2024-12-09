@@ -1,5 +1,6 @@
 # Learning progress of large visual language model
 
+The experiments are tested on 8 A100-80GB GPUs with CUDA 12.4
 
 
 # Setup
