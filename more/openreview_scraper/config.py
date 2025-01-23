@@ -1,0 +1,5 @@
+# OPENREVIEW CREDENTIALS
+
+EMAIL = "xdi1@jhu.edu"
+PASSWORD = "dx562458"
+
